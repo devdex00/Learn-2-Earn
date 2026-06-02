@@ -4,7 +4,7 @@ import "fmt"
 
 func main() {
 
-	// classic for loop pattern 
+	/*// classic for loop pattern 
 	for i := 0 ; i <= 5 ; i++ {
 		fmt.Println(i)
 	}
@@ -13,7 +13,7 @@ func main() {
 fmt.Println("\n")
 
 	// conditions only for loop pattern
-	var x int 
+	/*var x int 
 	x = 0
 	for x <= 5 {
 		fmt.Println(x)
@@ -21,7 +21,7 @@ fmt.Println("\n")
 	}
 
 	// infinite for loop 
-	for {
+	/*for {
 		fmt.Println("HI")
 	}
 
@@ -34,5 +34,13 @@ fmt.Println("\n")
 		return 
 	} else {
 		fmt.Println("Allowed")
+	}*/
+
+	for i := 0 ; i <= 10 ; i++ {
+		if i%2 != 0 {
+			continue  // skips the execution cycle for 3 and then move on with the other iteration
+		}
+		fmt.Println(i)
 	}
+	
 }
