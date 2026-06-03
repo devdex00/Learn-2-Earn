@@ -8,7 +8,7 @@ import (
 func main() {
 fmt.Println(RetainFirstHalf("Emmanuel"))
 }
-
+ 
 func RetainFirstHalf(s string) string{
 	
 	if s == "" {
@@ -21,17 +21,16 @@ func RetainFirstHalf(s string) string{
     
  
 /*
-	// figured this way myself
+	// 
 	var count int
 	for range s {
 		count++
 	}
-
 	half := count / 2
-
 	return s[:half]
 
 */
+
 // method from my check point guide 
 	var halflength int
 	halflength = len(s) / 2

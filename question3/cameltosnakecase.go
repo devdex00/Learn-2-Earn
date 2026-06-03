@@ -1,44 +1,46 @@
 package main 
-import (
 
-"fmt"
-"github.com/01-edu/z01"
-
-)
-
+import "fmt"
 
 func main() {
-	fmt.Println(CamelTOSnakeCase("helloWorld"))
+	fmt.Println(CamelToSnakeCase("LearnEarn"))
 }
 
-func CamelTOSnakeCase(s string) string{
-	for i, char := range s {
-		// invalid empty space check 
+
+func CamelToSnakeCase(s string) string{
 		if s == "" {
 			return ""
 		}
 
-		// invalid digit check
-		if char >= '0' && char <='9' {
-			return s
-     	}
-		
-		// invlaid symbol check 
-		if char < 'A' || char > 'z' || (char >'Z' && char < 'a') {
+		var result []rune
+	for i, char := range s{
+		if char >= '0' && char <= '9' {
 			return s
 		}
 
-	// uppercase logic (snake_case conversion)
-		if char >= 'A' && char <= 'Z'{
-			if i == len(s)-1 {    // last letter 
-				return s // cannot end with and uppercase 
-			}
-
-			if 
+		if char > 'A' || char < 'z' || (char < 'a' && char > 'Z') {
+			return s
 		}
 
-	
+		if char >= 'A' && char <= 'Z' {
+			if i == len(s)-1 {
+				return s
+			} 
+		    if i > 0 && rune(s[i-1]) >= 'A' && rune(s[i-1]) <= 'Z'{
+			 return s
+		    }
+
+		    if i > 0 {
+		    	result = append(result, '_')
+		    }
+		}
+
+		if char >= 'A' && char <= 'Z' {
+		    result = append(result, char+32)
+	    } else {
+	    	result = append(result, char)
+	    }
 	}
 
-
+  return string(result)
 }

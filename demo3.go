@@ -1,3 +1,12 @@
+package main 
+
+import "fmt"
+
+func main() {
+	fmt.Println(CamelToSnakeCase("LearnEarn"))
+}
+
+
 func CamelToSnakeCase(s string) string {
 	if s == "" {
 		return ""

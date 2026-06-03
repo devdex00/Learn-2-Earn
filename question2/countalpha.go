@@ -9,7 +9,7 @@ import (
 
 
 func main() {
-	fmt.Println(CheckNumber(""))
+	fmt.Println(CheckNumber("hello"))
 }
 
 func CheckNumber(s string) int {
